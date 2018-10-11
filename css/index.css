@@ -7,17 +7,195 @@
 
 .box {
   width: 33.33%;
-  height: 300px;
+  height: 500px;
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid #fff;
 
+  position: relative;
   float: left;
+  overflow: hidden;
+}
+
+.box img {
+  transition: all 0.35s;
+}
+
+.box:hover img {
+  transform: translate(-50px, 0px);
+  opacity: 0.5;
+}
+
+.box .transform-style {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #ffffff;
+  margin: 10px;
+}
+
+.box .transform-style h2 {
+  margin-bottom: 40px;
+}
+
+.box .transform-style p {
+  background: #eeeeee;
+  color: #000000;
+  margin-bottom: 20px;
+  transform: translate(-180px, 0px);
+  transition: all 0.35s;
+}
+
+.box:hover .transform-style p {
+  transform: translate(0px, 0px);
+}
+
+.box .transform-style p:nth-of-type(1) {
+  transition-delay: 0.1s
+}
+.box .transform-style p:nth-of-type(2) {
+  transition-delay: 0.2s
+}
+.box .transform-style p:nth-of-type(3) {
+  transition-delay: 0.3s
+}
+
+.box .roate-style {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #ffffff;
+  margin: 10px;
+}
+
+.box .roate-style h2 {
+  position: relative;
+  top: 80px;
+  left: 80px;
+  color: #000000;
+  margin-bottom: 40px;
+  transform: translate(-40px, 0px);
+  transition: all 0.35s;
+}
+
+.box:hover .roate-style h2 {
+  transform: translate(0px, 0px);
+}
+
+.box .roate-style p {
+  position: relative;
+  top: 80px;
+  left: 80px;
+  color: #000000;
+  margin-bottom: 20px;
+  transform: translate(0px, 100px);
+  opacity: 0;
+  transition: all 0.35s;
+}
+
+.box:hover .roate-style p {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.box:hover .roate-style p:nth-of-type(1) {
+  transition-delay: 0.05s
+}
+
+.box:hover .roate-style p:nth-of-type(2) {
+  transition-delay: 0.1s
+}
+
+.box:hover .roate-style p:nth-of-type(3) {
+  transition-delay: 0.15s
+}
+
+.box div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+  height: 400px;
+  width: 400px;
+  border: 1px solid #000000;
+  transform: translate(0px, -500px) rotate(0deg);
+  transition: all 0.35s;
+}
+
+.box:hover div {
+  transform: translate(0px, 0px) rotate(90deg);
+}
+
+.box .skew-style {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  transform: skew(90deg);
+  /* opacity: 0; */
+  transition: all 0.35s;
+}
+
+.box:hover .skew-style {
+  transform: skew(0deg);
+  /* opacity: 1; */
+}
+
+.box-scale {
+  width: 33.33%;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+.box-scale img {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  transform: translate(-180px, 0px) scale(1, 1);
+  opacity: 1;
+  transition: all 0.35s;
+}
+
+.box-scale:hover img {
+  transform: translate(-180px, 0px) scale(1.2, 1.2);
+  opacity: 0.5;
+}
+
+.box-scale .scale-style {
+  position: absolute;
+  top: 25%;
+  left: 23%;
+  transform: scale(1, 1);
+  transition: all 0.35s;
+}
+
+.box-scale:hover .scale-style {
+  transform: scale(1.1, 1.1);
+}
+
+.box-scale div {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  height: 60%;
+  width: 60%;
+  border: 1px solid #000000;
+  transform: scale(1.1, 1.1);
+  opacity: 0;
+  transition: all 0.35s;
+}
+
+.box-scale:hover div {
+  transform: scale(1, 1);
+  opacity: 1;
 }
 
 @media screen and (max-width: 400px) {
-  /* body {
-    overflow: scroll;
-  } */
   .box {
     width: 400px;
   }
